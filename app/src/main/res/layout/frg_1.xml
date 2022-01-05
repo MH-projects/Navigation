@@ -11,14 +11,22 @@
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/label_frg_1_portrait"
         android:textAlignment="center"
-        android:text="FRAGMENT 1\nPORTRAIT"
         android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NEXT" />
+        android:text="@string/next_navigation" />
+
+    <EditText
+        android:id="@+id/editInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:hint="@string/hint_enter"
+        tools:ignore="Autofill,TextFields" />
 
 </LinearLayout>

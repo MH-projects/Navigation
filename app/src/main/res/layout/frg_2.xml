@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:text="FRAGMENT 2\nPORTRAIT"
+        android:text="@string/label_frg_2_portrait"
         android:textSize="18sp" />
 
 </FrameLayout>

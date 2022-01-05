@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">Navigation</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="label_frg_1_portrait">FRAGMENT 1\nPORTRAIT</string>
+    <string name="label_frg_1_landscape">FRAGMENT 1\nLANDSCAPE</string>
+    <string name="label_frg_2_portrait">FRAGMENT 2\nPORTRAIT</string>
+    <string name="label_frg_2_landscape">FRAGMENT 2\nLANDSCAPE</string>
+
+    <string name="next_navigation">Next</string>
+    <string name="hint_enter">Write something</string>
+
 </resources>

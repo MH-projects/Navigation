@@ -1,16 +1,13 @@
 package com.mh.navigation
 
-import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentManager
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.frg_1.*
 
-class Frg1 : Fragment() {
+class Frg1 : BaseFragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,15 +19,17 @@ class Frg1 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        if (savedInstanceState != null) {
+            editInput.setText(savedInstanceState.getString("editInput"))
+        }
+
         btnNext.setOnClickListener {
             findNavController().navigate(R.id.action_frg1_to_frg2)
         }
     }
 
-    override fun onConfigurationChanged(newConfig: Configuration) {
-        val fragmentManager: FragmentManager? = fragmentManager
-        fragmentManager?.beginTransaction()?.detach(this)?.commitAllowingStateLoss()
-        super.onConfigurationChanged(newConfig)
-        fragmentManager?.beginTransaction()?.attach(this)?.commitAllowingStateLoss()
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putString("editInput", editInput.text.toString())
     }
 }
